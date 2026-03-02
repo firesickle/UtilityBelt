@@ -1,0 +1,23 @@
+<Application x:Class="UtilityBelt.App.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:tb="http://www.hardcodet.net/taskbar"
+             ShutdownMode="OnExplicitShutdown">
+    <Application.Resources>
+        <tb:TaskbarIcon x:Key="TrayIcon"
+                       ToolTipText="UtilityBelt"
+                       Visibility="Visible"
+                       MenuActivation="RightClick">
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Open / Toggle" Click="TrayToggleToolbar_Click" />
+                    <MenuItem Header="Reload config" Click="TrayReloadConfig_Click" />
+                    <MenuItem Header="Pause/Resume checks" Click="TrayToggleChecks_Click" />
+                    <MenuItem Header="Open logs folder" Click="TrayOpenLogs_Click" />
+                    <Separator />
+                    <MenuItem Header="Exit" Click="TrayExit_Click" />
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
+        </tb:TaskbarIcon>
+    </Application.Resources>
+</Application>
