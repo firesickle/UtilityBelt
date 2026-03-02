@@ -67,40 +67,6 @@ Buttons are configured in `appsettings.json` (exact schema may evolve). Typicall
 - a command/action
 - colors
 
----
-
-## Using this repo as a template (recommended)
-
-### Option A: “Copy and rename” (simple)
-1. Copy the repository folder.
-2. Rename the solution and project(s).
-3. Search/replace namespaces (e.g., `UtilityBelt.App`).
-4. Update `appsettings.default.json` defaults.
-
-### Option B: GitHub template repo
-If you publish on GitHub, you can mark the repository as a **Template repository** so others can click **Use this template**.
-
----
-
-## Publish / release checklist
-
-Before you publish a release, consider:
-- **Versioning**: set an app version (if you haven’t already).
-- **Signing** (optional): code-signing certificate if distributing broadly.
-- **Self-contained** (optional): publish with the .NET runtime included.
-- **Config migration**: if you change config schema, handle backward compatibility.
-- **Security**: avoid shipping any secrets in `appsettings.default.json`.
-
-Example publish (framework-dependent):
-
-```powershell
-cd .\src\UtilityBelt.App
-
-dotnet publish -c Release -r win-x64
-```
-
----
-
 ## License
 
 MIT License. See [LICENSE](./LICENSE).
