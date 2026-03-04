@@ -11,7 +11,7 @@ namespace UtilityBelt.App;
 
 public partial class App : Application
 {
-    private ServiceProvider? _provider;
+    private static ServiceProvider? _provider;
     private TaskbarIcon? _trayIcon;
     private ToolbarWindow? _toolbar;
     private HotCornerService? _hotCorner;
@@ -268,4 +268,10 @@ public partial class App : Application
 
         scheduler.Configure(checks);
     }
+
+    public T GetService<T>()
+    {
+        return _provider.GetRequiredService<T>();
+    }
+
 }
