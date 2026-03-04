@@ -271,6 +271,7 @@ public partial class App : Application
 
     public static T GetService<T>()
     {
+        if (_provider == null) throw new Exception("The _provider was null");
         return _provider.GetRequiredService<T>();
     }
 
