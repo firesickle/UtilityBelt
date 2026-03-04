@@ -269,7 +269,7 @@ public partial class App : Application
         scheduler.Configure(checks);
     }
 
-    public T GetService<T>()
+    public static T GetService<T>()
     {
         return _provider.GetRequiredService<T>();
     }
